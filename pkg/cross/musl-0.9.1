@@ -1,0 +1,11 @@
+source=http://www.etalabs.net/musl/releases/${pkgname}-${pkgver}.tar.gz
+
+
+config() {
+	./configure --prefix=$root/cross/$arch-unknown-linux-musl --target=$arch-unknown-linux-musl --disable-shared --disable-gcc-wrapper
+}
+
+
+install() {
+	make install
+}
